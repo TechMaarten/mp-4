@@ -1,5 +1,4 @@
 // components/WeatherCard.tsx
-
 type WeatherCardProps = {
     city: string;
     description: string;
@@ -17,6 +16,7 @@ type WeatherData = {
     days: WeatherDay[];
 };
 
+// The WeatherCard component displays weather info in a styled card
 export default function WeatherCard({ city, description, temperature, icon }: WeatherCardProps) {
     return (
         <div className="bg-white p-6 rounded-lg shadow-md mt-6 border text-center">

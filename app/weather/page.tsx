@@ -9,11 +9,12 @@ export default function WeatherPage() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState<WeatherData | null>(null);
     const [error, setError] = useState("");
-
+    // Async function to fetch weather data when the button is clicked
     const getWeather = async () => {
         setError("");
         setWeather(null);
 
+        // Send request to our API route with the city name as a query parameter
         const res = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
         const data = await res.json();
 
